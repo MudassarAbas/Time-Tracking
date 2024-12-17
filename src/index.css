@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+body {
+  margin: 0;
+  font-family: "Oswald", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: "Oswald", source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+:root {
+  --background-color: #fff;
+  --primary: #1e9ea4;
+  --primary-hover: #1c8f95;
+  --dark-grey-01: #2f2f2f;
+  --dark-grey-02: #474747;
+  --light-grey: #929292;
+  --error-color: #ff4c4c;
+  --text-color: #474747;
+  --input-border-color: #ccc;
+  --input-focus-border-color: #1e9ea4;
+  --button-background-color: #1e9da4;
+  --button-hover-background-color: #1c8f95;
+  --input-padding: 12px;
+  --green: #28c669;
+}

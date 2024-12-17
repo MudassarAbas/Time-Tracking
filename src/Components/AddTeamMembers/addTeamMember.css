@@ -1,0 +1,78 @@
+/* addMembers.css */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 50px 150px;
+  border-radius: 10px;
+  width: 819px;
+  max-width: 100%;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.cancel-button,
+.send-button {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 102px;
+  height: 45px;
+}
+.cancel-button {
+  background: #fff;
+  border: 1px solid var(--light-grey);
+}
+
+.send-button {
+  background: var(--button-background-color);
+  color: white;
+  margin-left: 10px;
+}
+
+.send-button:hover {
+  background: var(--button-background-color);
+}
+
+.invite-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.invite-link p {
+  color: var(--primary);
+  text-decoration: none;
+  cursor: pointer;
+}

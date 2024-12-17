@@ -1,0 +1,112 @@
+.screenshot-all-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.screenshot-all-hour-block {
+  display: flex;
+}
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+}
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  border: 1px solid #dfe2e5;
+  background-color: #ffffff;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background-color: #dfe2e5;
+  z-index: 0;
+  transform: translateX(-50%);
+}
+.screenshot-all-hour-info {
+  width: 100%;
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+}
+.screenshot-all-time-label {
+  padding-right: 50px;
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.screenshot-all-total-time {
+  color: #a4a4a5;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.screenshot-all-total-time span {
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.screenshot-all-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 screenshots per row */
+  grid-gap: 40px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.screenshot-all-card {
+  text-align: center;
+}
+
+.screenshot-all-thumbnail {
+  height: 116px;
+  width: 222px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.screenshot-all-bottom {
+  border-radius: 2px;
+  border: 0.2px solid #a4a4a5;
+}
+.screenshot-all-time {
+  font-size: 12px;
+  color: #555;
+  text-align: left;
+  margin: 10px;
+}
+.screenshot-all-department-label {
+  margin-bottom: 11px;
+  color: #36a7ff;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: inline-flex;
+  height: 31px;
+  padding: 8px 5px 8px 4px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 100px;
+  background: #eff1f5;
+}
+.screenshot-all-no-todos {
+  font-size: 12px;
+  color: #999;
+}

@@ -1,0 +1,128 @@
+/* projectDetailsPage.css */
+
+.project-details {
+  margin-bottom: 20px;
+}
+
+.project-details-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.project-header h2 {
+  color: #000;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0px;
+}
+
+.project-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.project-actions button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.project-actions button:hover {
+  text-decoration: underline;
+  color: var(--primary-hover);
+}
+
+.project-actions img {
+  width: 16px;
+  height: 16px;
+}
+.project-details-bottom {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.project-details-bottom h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.project-info {
+  display: flex;
+}
+
+.project-info div:nth-child(1) {
+  margin-right: 36px;
+}
+
+.project-info div {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-info span {
+  font-weight: bold;
+}
+
+.project-info p {
+  margin: 5px 0;
+}
+
+.status-active {
+  background-color: var(--green);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 5px;
+}
+
+.edit-members-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.edit-members-btn {
+  background-color: var(--primary);
+  color: white;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 19px;
+}
+
+.edit-members-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.members-tabs {
+  display: flex;
+  border-bottom: 2px solid #e9ecef;
+  margin-bottom: 20px;
+  max-width: fit-content;
+}
+
+.members-tab {
+  padding: 10px 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.members-tab.active {
+  border-bottom: 3px solid var(--primary);
+  color: var(--primary);
+}
+.members-tab:not(.active):hover {
+  color: var(--primary);
+}

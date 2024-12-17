@@ -1,0 +1,9 @@
+.App {
+  background: var(--Background-light-grey, #f8f8f8);
+  font-family: "Inter";
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

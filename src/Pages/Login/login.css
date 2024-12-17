@@ -1,0 +1,234 @@
+:root {
+  color: var(--Dark-Grey-02, #474747);
+}
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.login-main-image {
+  width: 850px;
+  height: 775px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.signup-container-left {
+  height: 100vh;
+  background-color: #f4f4f4;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-container-right {
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container-div {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  width: 514px;
+}
+
+.signup-logo {
+  height: 70px;
+  align-items: left;
+  margin-bottom: 32px;
+}
+
+.signup-container-form {
+  width: 514px;
+}
+
+.signup-container-form h3 {
+  color: var(--Dark-Grey-02, #474747);
+  font-family: "Inter";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0px;
+  margin-bottom: 12px;
+}
+
+.signup-container-form p {
+  color: var(--Dark-Grey-02, #474747);
+  font-family: "Inter";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 32px;
+  margin-top: 0px;
+}
+
+.label-and-input {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+}
+
+.label-and-input label {
+  color: var(--Dark-Grey-01, #2f2f2f);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 8px;
+}
+
+.label-and-input input {
+  display: flex;
+  padding: 17px 21px;
+  align-items: center;
+  gap: 32px;
+  border-radius: 9px;
+  background: #f4f4f4;
+  border: 2px solid transparent; /* Initial border to avoid layout shift */
+  transition: border-color 0.3s ease; /* Smooth transition */
+  font-family: "Inter";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+.label-and-input input:focus {
+  border: 0.5px solid var(--Primary, #1e9ea4); /* Change border color to red on focus */
+  outline: none; /* Remove default outline */
+}
+.label-and-input input::placeholder {
+  color: var(--Light-Grey, #929292);
+  font-family: "Inter";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.terms-and-conditions-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.terms-and-conditions-div-login {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkbox-input {
+  margin-right: 10px;
+  margin-bottom: 7px;
+  width: 15px;
+  height: 15px;
+}
+
+.red-star {
+  color: #ff4c4c;
+}
+
+.signup-container form button {
+  font-style: normal;
+  font-family: "Inter";
+  width: 100%;
+  padding: 13px;
+  background: #1e9ea4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.signup-container form button:hover {
+  background: #1b9299;
+}
+
+.agree-to-terms {
+  color: var(--Dark-Grey-01, #2f2f2f);
+  font-family: "Inter";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 28px */
+  margin: 32px 0px;
+}
+
+.privacy-policy {
+  text-decoration: none;
+  color: #1e9ea4;
+}
+
+.forgot-password {
+  text-decoration: none;
+  color: #1e9ea4;
+  text-align: right;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+}
+
+.dont-have-an-account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dont-have-an-account-text {
+  color: #151515;
+  text-align: center;
+}
+
+.signup-link {
+  color: #1e9ea4;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 5px;
+}
+.send-instructions {
+  margin-top: 32px;
+}
+.change-password-button {
+  margin-top: 32px;
+}
+.input-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.input-container input {
+  flex-grow: 1;
+  padding-right: 40px; /* Add padding to avoid text overlapping with the icon */
+}
+.password-input-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.password-input-container input {
+  flex-grow: 1;
+  padding-right: 40px; /* Add padding to avoid text overlapping with the icon */
+}
+
+.toggle-password-visibility {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}

@@ -1,0 +1,97 @@
+.onboarding-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-div {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  background-color: #ffff;
+  border-radius: 25px;
+}
+
+.search-icon {
+  padding: 10px;
+}
+.onboarding-search input {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+}
+.onboarding-search input:focus {
+  border: none;
+  outline: none;
+}
+.onboarding-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.onboarding-grid-header,
+.onboarding-grid-row {
+  display: contents;
+}
+.onboarding-grid-cell {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 300;
+}
+.onboarding-grid-header .onboarding-grid-cell {
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.onboarding-email {
+  display: flex;
+  justify-content: flex-start;
+}
+.onboarding-email-heading {
+  margin-left: 30px;
+}
+.onboarding-avatar {
+  width: 25px;
+  height: 25px;
+  background-color: #193d61;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 30px;
+}
+.reminder-icon {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+.onboarding-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pagination-buttons button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.pagination-buttons button.active {
+  background-color: #007bff;
+  color: white;
+}

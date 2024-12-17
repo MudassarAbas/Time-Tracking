@@ -1,0 +1,58 @@
+.daily-total-hours h2 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.daily-timesheet-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 2fr 2fr; /* Adjust column widths as needed */
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.time-bar-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.time-bar {
+  position: relative;
+  height: 20px;
+  background-color: #e9edef;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.time-segment {
+  position: absolute;
+  height: 100%;
+  background-color: var(--primary);
+  border-radius: 10px;
+}
+
+.time-bar-markers {
+  position: relative;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.time-marker {
+  position: absolute;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #333;
+}
+.daily-date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.daily-date h3 {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}

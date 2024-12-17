@@ -1,0 +1,222 @@
+.calendar-timesheet {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.week-header {
+  display: grid;
+  grid-template-columns: 50px repeat(8, 1fr);
+  height: 70px;
+  border-bottom: none; /* Remove bottom border for seamless flow */
+  position: relative;
+}
+
+.day-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  text-align: center;
+  padding: 5px 0;
+  font-weight: bold;
+  border-right: 1px solid #e3e3e3; /* Extend the day-column border to the header */
+}
+
+.day-name-and-month {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 0px 6px;
+}
+
+.day-name {
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.day-month {
+  color: #a4a4a5;
+  font-size: 10.5px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.day-date {
+  text-align: center;
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.week-body {
+  display: grid;
+  grid-template-columns: 50px repeat(8, 1fr);
+  background-color: #f7f7f7;
+}
+
+.time-label-column {
+  display: grid;
+  grid-template-rows: repeat(24, 170px);
+  position: relative;
+}
+
+.hour-label {
+  text-align: center;
+  font-size: 0.9em;
+  color: #333;
+  padding-top: 10px;
+}
+
+.day-column {
+  display: grid;
+  grid-template-rows: repeat(96, 42.5px);
+  position: relative;
+  border-right: 1px solid #e3e3e3;
+}
+.day-column::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent calc(42.5px * 4 - 1px),
+    /* Adjust to allow for the line */ #e3e3e3 calc(42.5px * 4 - 1px),
+    /* 1px line */ #e3e3e3 calc(42.5px * 4) /* Reset for the next block */
+  );
+  pointer-events: none; /* Ensure it doesn’t block interactions */
+  z-index: 0; /* Behind task blocks */
+}
+.empty-day-column {
+  border-right: 1px solid #e3e3e3;
+  border-top: 1px solid #e3e3e3;
+}
+.empty-day-column:nth-child(4n) {
+  border-right: none;
+}
+.empty-day-header {
+  border-right: 1px solid #e3e3e3;
+}
+.hour-row {
+  height: 42.5px;
+  position: relative;
+}
+
+/* Show border only for full hour rows (every fourth row) */
+.hour-row:nth-child(4n) {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+/* To make the hour-row visually extend beyond the first column */
+.time-label-column .hour-row {
+  border-left: none; /* Remove left border from the time column */
+}
+.hour-line {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #e3e3e3;
+  top: calc(
+    var(--interval) * 42.5px
+  ); /* Use CSS variable or JS to position each */
+  z-index: 0; /* Ensure it is behind the task blocks */
+}
+
+/* Task block styling */
+.task-block {
+  position: relative;
+  z-index: 1; /* On top of hour lines */
+  margin: 5px;
+  border-radius: 4px;
+  border: 1px solid #82572c;
+  background: #b7a695;
+  width: 96%;
+  padding: 13px 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.task-block:hover {
+  color: #fff;
+  overflow: visible;
+  min-height: 50px;
+  z-index: 10;
+}
+
+.task-time {
+  color: #000;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.task-description {
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-top: 5px;
+}
+
+/* Handling overlap */
+.task-block.overlap {
+  background-color: #e6ddd5;
+  z-index: 1;
+  margin-top: -5px;
+}
+
+/* Extend the day column lines to the header */
+.day-header:first-child {
+  border-left: none;
+}
+
+/* Smaller header and time label column */
+.week-header {
+  display: grid;
+  grid-template-columns: 20px repeat(8, 0.2fr); /* Reduce the first column width */
+  height: 70px;
+  border-bottom: none; /* Remove bottom border for seamless flow */
+  position: relative;
+}
+
+.week-body {
+  display: grid;
+  grid-template-columns: 20px repeat(8, 0.2fr); /* Reduce the first column width */
+  background-color: #f7f7f7;
+}
+
+.time-label-column {
+  display: grid;
+  grid-template-rows: repeat(24, 170px);
+  position: relative;
+}
+
+.hour-label {
+  padding: 0px;
+}
+
+.hour-label p {
+  width: 50px;
+  color: #000;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: -10px;
+  margin-left: -30px;
+  z-index: 99999;
+}

@@ -1,0 +1,35 @@
+.project-members-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 0.5fr 1fr; /* Adjust column widths as needed */
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.project-role-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-member-role-div {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-select-project-member-role {
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  width: 60%;
+  height: 43px;
+  padding: 5px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.project-members-option-label {
+  text-align: left;
+  margin-left: 7px;
+}
+.add-members-button {
+  margin-left: 10px;
+}

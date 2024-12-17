@@ -1,0 +1,51 @@
+.widget {
+  padding: 20px;
+  border: 1px solid #e4e4e4;
+  background: #fff;
+}
+
+.widget-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #2f2f2f;
+}
+
+.widget-value {
+  font-family: "Inter";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #474747;
+}
+.widget-bottom-values {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.widget-change {
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+}
+.widget-change img {
+  margin-right: 5px;
+}
+.widget-change.positive {
+  color: green;
+}
+
+.widget-change.negative {
+  color: red;
+}

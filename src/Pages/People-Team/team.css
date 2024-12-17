@@ -1,0 +1,139 @@
+.team-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.team-page-header-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px;
+}
+.team-page-title {
+  color: #000;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.search-div {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  background-color: #ffff;
+  border-radius: 25px;
+}
+
+.search-icon {
+  padding: 10px;
+}
+
+.team-search input {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+}
+
+.team-search input:focus {
+  border: none;
+  outline: none;
+}
+
+.add-team-button {
+  border-radius: 8px;
+  border: 1px solid var(--primary);
+  width: 151px;
+  height: 43px;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.team-grid-header,
+.team-grid-row {
+  display: contents;
+}
+
+.team-grid-cell {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.team-grid-header .team-grid-cell {
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.team-name {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 30px;
+}
+
+.team-avatar {
+  width: 25px;
+  height: 25px;
+  background-color: #193d61;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.team-checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+.actions-button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 3px;
+  border: 1px solid #b3b3b3;
+  width: 111px;
+  height: 33px;
+}
+
+.team-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination-buttons button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.pagination-buttons button.active {
+  background-color: #007bff;
+  color: white;
+}

@@ -1,0 +1,137 @@
+.projects-container {
+  overflow-y: scroll;
+  width: 100%;
+  max-height: 547px;
+  margin-top: 35px;
+  padding: 24px 18px;
+  border-radius: 10px;
+  background: var(--White, #fff);
+}
+
+.projects-container:hover {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.projects-header h2 {
+  margin: 0px;
+  color: var(--Dark-Grey-01, #2f2f2f);
+  font-family: "Inter";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.projects-view-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-view-all p {
+  color: #1e9ea4;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.projects-table {
+  width: 100%;
+}
+
+.project-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-top: 1px solid #929292;
+}
+.project-row-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-info {
+  display: flex;
+  align-items: center;
+}
+
+.project-activity-percentage {
+  margin-right: 10px;
+  border-radius: 30px;
+  display: flex;
+  width: 42px;
+  height: 17px;
+  padding: 1px 5px;
+  justify-content: center;
+  align-items: center;
+  color: var(--White, #fff);
+  text-align: center;
+  font-family: "Inter";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.project-department-initials {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.project-department-name {
+  color: var(--Dark-Grey-01, #2f2f2f);
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.project-time {
+  color: var(--Dark-Grey-01, #2f2f2f);
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-right: 12px;
+}
+
+.project-progress-bar {
+  border-radius: 20px;
+  width: 100px;
+  height: 4px;
+  background-color: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.project-progress {
+  height: 100%;
+  background-color: #1e9ea4;
+}
+
+.green {
+  background: var(--Success-Green, #28a745);
+}

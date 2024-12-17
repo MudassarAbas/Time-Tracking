@@ -1,0 +1,59 @@
+.screenshots-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.hour-block {
+  margin-bottom: 30px;
+}
+
+.hour-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.time-label {
+  font-size: 14px;
+  color: #888;
+}
+
+.total-time {
+  font-size: 12px;
+  color: #555;
+}
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 screenshots per row */
+  grid-gap: 10px;
+}
+
+.screenshot-card {
+  text-align: center;
+}
+
+.screenshot-thumbnail {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.screenshot-time {
+  font-size: 12px;
+  color: #555;
+  margin-top: 5px;
+}
+
+.department-label {
+  color: #36a7ff;
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+.no-todos {
+  font-size: 12px;
+  color: #999;
+}

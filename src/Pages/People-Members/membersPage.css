@@ -1,0 +1,91 @@
+/* members.css */
+
+.members-component {
+  padding: 20px;
+}
+
+.members-top-section {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.members-top-section h2 {
+  font-size: 24px;
+  margin-bottom: 27px;
+}
+.members-tabs {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.members-tab {
+  margin-right: 40px;
+  padding: 4px 0px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.members-tab.active {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+}
+
+.members-count {
+  margin-bottom: 20px;
+  color: gray;
+}
+
+.members-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.search-div {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  background-color: #ffff;
+  border-radius: 25px;
+}
+.search-icon {
+  padding: 10px;
+}
+.members-search input {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  /* border: 1px solid #ccc; */
+  border: none;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.members-search input:focus {
+  border: none;
+  outline: none;
+}
+.add-members-button,
+.invite-members-button {
+  border-radius: 8px;
+  border: 1px solid var(--primary);
+  width: 151px;
+  height: 43px;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.add-members-button:hover {
+  background-color: var(--primary-hover);
+  cursor: pointer;
+}
+/* Other styles remain unchanged */

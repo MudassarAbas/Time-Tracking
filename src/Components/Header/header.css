@@ -1,0 +1,24 @@
+.header-main-div {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+
+.header-main-div h1 {
+  color: #000;
+  font-family: "Inter";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+.date-range {
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

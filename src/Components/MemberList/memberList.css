@@ -1,0 +1,155 @@
+.members-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 2fr 2fr 1fr; /* Adjust column widths as needed */
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.members-grid-header,
+.members-grid-row {
+  display: contents;
+}
+.abc {
+  border-top: 1px solid #ccc;
+  background-color: red;
+}
+.members-grid-cell {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+  color: #000;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: -0.32px;
+}
+
+.members-grid-header .members-grid-cell {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.4px;
+  text-transform: capitalize;
+  /* background-color: #f0f0f0; */
+}
+
+.member-name,
+.invite-email {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 30px;
+}
+
+.member-avatar {
+  width: 25px;
+  height: 25px;
+  background-color: #193d61;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.members-checkbox {
+  width: 20px;
+  height: 20px;
+}
+.status-label {
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: white;
+  display: inline-block;
+}
+
+.status-label.enabled,
+.status-label.pending,
+.status-label.disabled,
+.status-label.expired {
+  border-radius: 3px;
+  width: 111px;
+  height: 33px;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: -0.32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.status-label.disabled,
+.status-label.expired {
+  background-color: #f00;
+}
+.status-label.enabled,
+.status-label.pending {
+  background-color: #00b258;
+}
+.actions-button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 3px;
+  border: 1px solid #b3b3b3;
+  width: 111px;
+  height: 33px;
+}
+.actions-button:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+.members-action-cheveron {
+  margin-top: 2px;
+}
+.members-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination-buttons button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.pagination-buttons button.active {
+  background-color: var(--button-background-color);
+  color: white;
+}
+.custom-dropdown-menu {
+  position: absolute;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+  width: 250px;
+  z-index: 1000;
+  right: 10%; /* Add this line to position the menu to the right */
+  top: 74%; /* Add this line to position the menu below the button */
+}
+
+.custom-dropdown-menu div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.custom-dropdown-menu div:hover {
+  background: #f4f4f4;
+}
+.text-center {
+  text-align: center;
+}

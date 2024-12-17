@@ -1,0 +1,153 @@
+.sidebar {
+  width: 275px;
+  height: 100vh;
+  background-color: #f4f4f4;
+  padding: 36px 0px;
+  position: fixed; /* Make the sidebar fixed */
+  top: 0; /* Align it to the top */
+  left: 0; /* Align it to the left */
+  overflow-y: auto; /* Make it scrollable */
+  transition: width 0.3s ease;
+  z-index: 2; /* Ensure it stays on top of other components */
+}
+
+.sidebar.closed {
+  width: 40px; /* Adjust this value as needed */
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.navbar-left-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: #2f2f2f;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.navbar-left-div:hover {
+  cursor: pointer;
+  color: var(--primary-hover);
+  transition: color 0.1s ease-out;
+  transition: color 0.1s ease-in;
+}
+.navbar-first-icon {
+  margin-right: 10px;
+  width: 20px;
+}
+.sidebar-logo {
+  height: 30px;
+  margin-left: 25px;
+}
+.sidebar.closed .sidebar-logo {
+  margin-left: 0px; /* Adjust as needed */
+}
+.drop-dowm-containing-div {
+  display: flex;
+  flex-direction: column;
+}
+.chevron-icon {
+  margin-left: auto;
+  cursor: pointer;
+  align-self: center;
+}
+.sidebar-main-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0px 28px;
+}
+.sidebar.closed .sidebar-main-ul {
+  margin-left: 10px;
+}
+.main-li {
+  width: 217px;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 15px 0px;
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-nav ul li:hover {
+  cursor: pointer;
+}
+
+.sidebar-nav ul li:hover a {
+  transition: color 0.1s ease-out;
+}
+
+.sidebar-nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.sidebar-nav ul li a.active,
+.navbar-left-div.active,
+.active span {
+  color: var(--primary);
+}
+.active {
+  color: var(--primary);
+}
+.dropdown-menu {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin-left: 45px;
+}
+
+.dropdown-menu li {
+  margin-top: 18px;
+  font-size: 16px;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-menu a {
+  color: #333;
+  width: 100%;
+  padding: 8px 0px;
+}
+
+.dropdown-menu a:hover {
+  color: var(--primary-hover);
+}
+
+.toggle-button {
+  position: absolute;
+  top: 60px;
+  right: -20px; /* Adjust to attach it to the sidebar */
+  background: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: right 0.1s ease; /* Ensure the button moves with the sidebar */
+  display: none;
+}
+
+.sidebar.closed .toggle-button {
+  right: -20px; /* Adjust to match the closed state */
+}
+
+.toggle-icon {
+  width: 20px;
+  height: 20px;
+}

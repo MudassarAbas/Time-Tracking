@@ -1,0 +1,208 @@
+.recent-activity {
+  width: 100%;
+  max-height: 592px;
+  overflow-y: scroll;
+  margin-top: 35px;
+  padding: 24px 18px;
+  border-radius: 10px;
+  background: var(--White, #fff);
+}
+.recent-activity:hover {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header h2 {
+  margin: 0px;
+  color: var(--Dark-Grey-01, #2f2f2f);
+  font-family: "Inter";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.recent-activity-view-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.recent-activity-view-all p {
+  color: #1e9ea4;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+}
+.activity-row {
+  margin-bottom: 20px;
+}
+.hr {
+  margin-bottom: 16px;
+}
+.activity-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-name {
+  color: var(--Dark-Grey-01, #2f2f2f);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.department-name {
+  color: var(--Dark-Grey-01, #2f2f2f);
+  text-align: right;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.activity-screenshots {
+  display: flex;
+  justify-content: space-between;
+}
+.screenshot {
+  position: relative;
+  cursor: pointer;
+}
+.screenshot img {
+  width: 250px;
+  height: 128px;
+  border-radius: 4px;
+}
+
+.view-all-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.screenshot:hover .view-all-btn {
+  visibility: visible;
+}
+
+.activity-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.activity-percentage {
+  margin-right: 8px;
+  margin-left: -8px;
+  border-radius: 30px;
+  display: flex;
+  width: 42px;
+  height: 17px;
+  padding: 1px 5px;
+  justify-content: center;
+  align-items: center;
+  color: var(--White, #fff);
+  text-align: center;
+  font-family: "Inter";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.green {
+  background: var(--Success-Green, #28a745);
+}
+.yellow {
+  background: var(--Warning-Yellow, #ffc107);
+}
+.red {
+  background: var(--Error-Red, #ff4c4c);
+}
+.activity-time {
+  color: var(--Dark-Grey-01, #2f2f2f);
+  text-align: center;
+  font-family: "Inter";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+/* Modal Styles */
+.recent-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+.recent-modal-content {
+  position: relative;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  text-align: center;
+  width: 80%;
+  height: 80%;
+}
+.recent-modal-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+.recent-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000;
+}
+.recent-modal-navigation {
+  margin-top: 10px;
+}
+.recent-modal-navigation button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+.recent-modal-navigation button:hover {
+  background: #0056b3;
+}
