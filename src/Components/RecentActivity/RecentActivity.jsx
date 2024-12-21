@@ -13,8 +13,8 @@ const RecentActivity = () => {
   const RecentActivities = [
     {
       userImage: userImage,
-      userName: "Name Name",
-      departmentName: "Department name",
+      userName: "Mudassar Abbas",
+      departmentName: "Computer Science",
       screenshots: [
         {
           image: screenshot1,
@@ -40,8 +40,8 @@ const RecentActivity = () => {
     },
     {
       userImage: userImage,
-      userName: "Name Name",
-      departmentName: "Department name",
+      userName: "Malik Huzaifa",
+      departmentName: "Computer Science",
       screenshots: [
         {
           image: screenshot1,
@@ -67,8 +67,8 @@ const RecentActivity = () => {
     },
     {
       userImage: userImage,
-      userName: "Name Name",
-      departmentName: "Department name",
+      userName: "Aleem Aslam",
+      departmentName: "Psychology",
       screenshots: [
         {
           image: screenshot1,
@@ -94,8 +94,8 @@ const RecentActivity = () => {
     },
     {
       userImage: userImage,
-      userName: "Name Name",
-      departmentName: "Department name",
+      userName: "Bilal Khan",
+      departmentName: "BBA",
       screenshots: [
         {
           image: screenshot1,
