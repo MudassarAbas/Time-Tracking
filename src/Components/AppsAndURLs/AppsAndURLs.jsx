@@ -4,34 +4,33 @@ import { Link } from "react-router-dom";
 import expandMore from "../Assets/expand-more.png";
 
 const AppsAndURLs = () => {
-  const urls = [
-    {
-      url: "www.url.com",
-      time: "000:00:00",
-      progress: 80,
-    },
-    {
-      url: "www.url.com",
-      time: "000:00:00",
-      progress: 60,
-    },
-    {
-      url: "www.url.com",
-      time: "000:00:00",
-      progress: 10,
-    },
-    {
-      url: "www.url.com",
-      time: "000:00:00",
-      progress: 40,
-    },
-    {
-      url: "www.url.com",
-      time: "000:00:00",
-      progress: 60,
-    },
-  ];
-
+const urls = [
+  {
+    url: "www.workhub.com/hr",
+    time: "00:12:34",
+    progress: 80,
+  },
+  {
+    url: "www.workhub.com/finance",
+    time: "00:05:22",
+    progress: 60,
+  },
+  {
+    url: "www.workhub.com/marketing",
+    time: "00:02:15",
+    progress: 10,
+  },
+  {
+    url: "www.workhub.com/engineering",
+    time: "00:18:45",
+    progress: 40,
+  },
+  {
+    url: "www.workhub.com/sales",
+    time: "00:09:30",
+    progress: 60,
+  },
+];
   return (
     <div className="apps-urls-container">
       <div className="apps-urls-header">

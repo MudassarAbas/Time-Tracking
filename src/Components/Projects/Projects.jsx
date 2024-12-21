@@ -8,37 +8,37 @@ const Projects = () => {
     {
       percentage: "20",
       departmentName: "Marketing Department",
-      time: "000:00:00",
+      time: "02:25:30",
     },
     {
       percentage: "70",
-      departmentName: "Marketing Department",
-      time: "000:00:00",
+      departmentName: "Finance Department",
+      time: "08:23:45",
     },
     {
       percentage: "20",
-      departmentName: "Marketing Department",
-      time: "000:00:00",
+      departmentName: "IT Department",
+      time: "02:25:00",
     },
     {
-      percentage: "000",
+      percentage: "00",
       departmentName: "Sales Department",
-      time: "000:00:00",
+      time: "00:00:00",
     },
     {
       percentage: "100",
-      departmentName: "Sales Department",
-      time: "000:00:00",
+      departmentName: "Media Department",
+      time: "01:30:10",
     },
     {
       percentage: "80",
-      departmentName: "Sales Department",
-      time: "000:00:00",
+      departmentName: "Business Department",
+      time: "09:30:10",
     },
     {
       percentage: "40",
-      departmentName: "Sales Department",
-      time: "000:00:00",
+      departmentName: "Security Department",
+      time: "04:20:10",
     },
   ];
   function getInitials(name) {
