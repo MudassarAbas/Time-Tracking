@@ -7,3 +7,6 @@
 *::after {
   box-sizing: border-box;
 }
+.mudasser {
+  display: none;
+}
