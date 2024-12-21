@@ -218,22 +218,7 @@ const Sidebar = () => {
                     <span>Screenshots</span>
                   </Link>
                 </li>
-                <li className={activeSubItem === "apps" ? "active" : ""}>
-                  <Link
-                    to="/activity/apps"
-                    onClick={() => setActiveSubItem("apps")}
-                  >
-                    <span>Apps</span>
-                  </Link>
-                </li>
-                <li className={activeSubItem === "urls" ? "active" : ""}>
-                  <Link
-                    to="/activity/urls"
-                    onClick={() => setActiveSubItem("urls")}
-                  >
-                    <span>URLs</span>
-                  </Link>
-                </li>
+                
               </ul>
             )}
           </li>
