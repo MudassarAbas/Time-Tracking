@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./sidebar.css";
 import plusCircle from "../../Components/Assets/plus-circle.png";
+import logouticon from "../../Components/Assets/logout.png";
 import logo from "../../Components/Assets/logo.png";
 import logoSmall from "../../Components/Assets/logo-small.png";
 import chevronDown from "../../Components/Assets/chevron-down.png";
@@ -12,8 +13,6 @@ import CalendarActive from "../../Components/Assets/Calender=Active.png";
 import CalendarInactive from "../../Components/Assets/Calender=Inactive.png";
 import DashboardActive from "../../Components/Assets/Dashboard=Active.png";
 import DashboardInactive from "../../Components/Assets/Dashboard=Inactive.png";
-import ReportsActive from "../../Components/Assets/Reports=active.png";
-import ReportsInactive from "../../Components/Assets/Reports=Inactive.png";
 import SettingsActive from "../../Components/Assets/Settings=Active.png";
 import SettingsInactive from "../../Components/Assets/Settings=Inactive.png";
 import TimeActive from "../../Components/Assets/Time=Active.png";
@@ -24,7 +23,7 @@ import ProjectActive from "../../Components/Assets/Project=Active.png";
 import ProjectInactive from "../../Components/Assets/Project=Inactive.png";
 import chevronRight from "../../Components/Assets/chevron-right.png";
 import chevronLeft from "../../Components/Assets/chevron-left.png";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../redux/authSlice";
 
 const Sidebar = () => {
@@ -44,6 +43,8 @@ const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [activeItem, setActiveItem] = useState("");
   const [activeSubItem, setActiveSubItem] = useState("");
+  const loginUser = useSelector((state) => state.auth);
+  const id = loginUser.user._id;
 
   const toggleDropdown = (section) => {
     setDropdowns((prevDropdowns) => {
@@ -183,41 +184,26 @@ const Sidebar = () => {
               </div>
             </Link>
           </li>
-          <li className="drop-dowm-containing-div main-li">
-            <div
-              className={`navbar-left-div ${
-                activeItem === "activity" ? "active" : ""
-              }`}
-              onClick={() => toggleDropdown("activity")}
-            >
-              <img
-                src={
-                  activeItem === "activity" ? ActivityActive : ActivityInactive
-                }
-                alt="icon"
-                className="navbar-first-icon"
-              />
-              {isSidebarOpen && "Activity"}
-              {isSidebarOpen && (
+          <li className="main-li">
+            <Link to="/activity/screenshot">
+              <div
+                className={`navbar-left-div ${
+                  activeItem === "activity" ? "active" : ""
+                }`}
+                onClick={() => setActiveItem("activity")}
+              >
                 <img
-                  src={dropdowns.activity ? chevronUp : chevronDown}
-                  alt="dropdown icon"
-                  className="chevron-icon"
+                  src={
+                    activeItem === "activity"
+                      ? ActivityActive
+                      : ActivityInactive
+                  }
+                  alt="icon"
+                  className="navbar-first-icon"
                 />
-              )}
-            </div>
-            {dropdowns.activity && isSidebarOpen && (
-              <ul className="dropdown-menu">
-                <li className={activeSubItem === "screenshots" ? "active" : ""}>
-                  <Link
-                    to="/activity/screenshot"
-                    onClick={() => setActiveSubItem("screenshots")}
-                  >
-                    <span>Screenshots</span>
-                  </Link>
-                </li>
-              </ul>
-            )}
+                {isSidebarOpen && "Activity"}
+              </div>
+            </Link>
           </li>
           <li className="main-li">
             <Link to="/projects">
@@ -238,126 +224,28 @@ const Sidebar = () => {
               </div>
             </Link>
           </li>
-          <li className="drop-dowm-containing-div  main-li">
-            <div
-              className={`navbar-left-div ${
-                activeItem === "calendar" ? "active" : ""
-              }`}
-              onClick={() => toggleDropdown("calendar")}
-            >
-              <img
-                src={
-                  activeItem === "calendar" ? CalendarActive : CalendarInactive
-                }
-                alt="icon"
-                className="navbar-first-icon"
-              />
-              {isSidebarOpen && "Calendar"}
-              {isSidebarOpen && (
+          <li className="main-li">
+            <Link to="/calendar">
+              <div
+                className={`navbar-left-div ${
+                  activeItem === "calendar" ? "active" : ""
+                }`}
+                onClick={() => setActiveItem("calendar")}
+              >
                 <img
-                  src={dropdowns.calendar ? chevronUp : chevronDown}
-                  alt="dropdown icon"
-                  className="chevron-icon"
-                />
-              )}
-            </div>
-            {dropdowns.calendar && isSidebarOpen && (
-              <ul className="dropdown-menu">
-                <li className={activeSubItem === "schedules" ? "active" : ""}>
-                  <Link
-                    to="/calendar/schedules"
-                    onClick={() => setActiveSubItem("schedules")}
-                  >
-                    <span>Schedules</span>
-                  </Link>
-                </li>
-                <li
-                  className={
-                    activeSubItem === "time-off-requests" ? "active" : ""
+                  src={
+                    activeItem === "calendar"
+                      ? CalendarActive
+                      : CalendarInactive
                   }
-                >
-                  <Link
-                    to="/calendar/time-off-requests"
-                    onClick={() => setActiveSubItem("time-off-requests")}
-                  >
-                    <span>Time off requests</span>
-                  </Link>
-                </li>
-              </ul>
-            )}
-          </li>
-          <li className="drop-dowm-containing-div  main-li">
-            <div
-              className={`navbar-left-div ${
-                activeItem === "reports" ? "active" : ""
-              }`}
-              onClick={() => toggleDropdown("reports")}
-            >
-              <img
-                src={activeItem === "reports" ? ReportsActive : ReportsInactive}
-                alt="icon"
-                className="navbar-first-icon"
-              />
-              {isSidebarOpen && "Reports"}
-              {isSidebarOpen && (
-                <img
-                  src={dropdowns.reports ? chevronUp : chevronDown}
-                  alt="dropdown icon"
-                  className="chevron-icon"
+                  alt="icon"
+                  className="navbar-first-icon"
                 />
-              )}
-            </div>
-            {dropdowns.reports && isSidebarOpen && (
-              <ul className="dropdown-menu">
-                <li
-                  className={activeSubItem === "daily-totals" ? "active" : ""}
-                >
-                  <Link
-                    to="/reports/daily-totals"
-                    onClick={() => setActiveSubItem("daily-totals")}
-                  >
-                    <span>Daily totals (weekly)</span>
-                  </Link>
-                </li>
-                <li
-                  className={activeSubItem === "amounts-owned" ? "active" : ""}
-                >
-                  <Link
-                    to="/reports/amounts-owned"
-                    onClick={() => setActiveSubItem("amounts-owned")}
-                  >
-                    <span>Amounts owned</span>
-                  </Link>
-                </li>
-                <li className={activeSubItem === "payments" ? "active" : ""}>
-                  <Link
-                    to="/reports/payments"
-                    onClick={() => setActiveSubItem("payments")}
-                  >
-                    <span>Payments</span>
-                  </Link>
-                </li>
-                <li
-                  className={activeSubItem === "time-activity" ? "active" : ""}
-                >
-                  <Link
-                    to="/reports/time-activity"
-                    onClick={() => setActiveSubItem("time-activity")}
-                  >
-                    <span>Time & activity</span>
-                  </Link>
-                </li>
-                <li className={activeSubItem === "all-reports" ? "active" : ""}>
-                  <Link
-                    to="/reports/all-reports"
-                    onClick={() => setActiveSubItem("all-reports")}
-                  >
-                    <span>All reports</span>
-                  </Link>
-                </li>
-              </ul>
-            )}
+                {isSidebarOpen && "Calendar "}
+              </div>
+            </Link>
           </li>
+
           <li className="drop-dowm-containing-div  main-li">
             <div
               className={`navbar-left-div ${
@@ -400,55 +288,32 @@ const Sidebar = () => {
               </ul>
             )}
           </li>
-          <li className="drop-dowm-containing-div  main-li">
-            <div
-              className={`navbar-left-div ${
-                activeItem === "settings" ? "active" : ""
-              }`}
-              onClick={() => toggleDropdown("settings")}
-            >
-              <img
-                src={
-                  activeItem === "settings" ? SettingsActive : SettingsInactive
-                }
-                alt="icon"
-                className="navbar-first-icon"
-              />
-              {isSidebarOpen && "Settings & Policies"}
-              {isSidebarOpen && (
+          <li className="main-li">
+            <Link to={`/people/members/${id}`}>
+              <div
+                className={`navbar-left-div ${
+                  activeItem === "settings" ? "active" : ""
+                }`}
+                onClick={() => setActiveItem("settings")}
+              >
                 <img
-                  src={dropdowns.settings ? chevronUp : chevronDown}
-                  alt="dropdown icon"
-                  className="chevron-icon"
+                  src={
+                    activeItem === "settings"
+                      ? SettingsActive
+                      : SettingsInactive
+                  }
+                  alt="icon"
+                  className="navbar-first-icon"
                 />
-              )}
-            </div>
-            {dropdowns.settings && isSidebarOpen && (
-              <ul className="dropdown-menu">
-                <li className={activeSubItem === "general" ? "active" : ""}>
-                  <Link
-                    to="/settings/general"
-                    onClick={() => setActiveSubItem("general")}
-                  >
-                    <span>General</span>
-                  </Link>
-                </li>
-                <li className={activeSubItem === "feature" ? "active" : ""}>
-                  <Link
-                    to="/settings/feature"
-                    onClick={() => setActiveSubItem("feature")}
-                  >
-                    <span>Feature</span>
-                  </Link>
-                </li>
-              </ul>
-            )}
+                {isSidebarOpen && "Profile"}
+              </div>
+            </Link>
           </li>
           <li className="main-li">
             <Link to="/login" onClick={logoutUser}>
               <div className="navbar-left-div">
                 <img
-                  src={plusCircle}
+                  src={logouticon}
                   alt="icon"
                   className="navbar-first-icon"
                 />

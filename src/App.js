@@ -17,6 +17,7 @@ import ProjectsPage from "./Pages/ProjectsPage/ProjectsPage";
 import ProjectDeailsPage from "./Pages/ProjectDeailsPage/ProjectDeailsPage";
 import Timesheet from "./Pages/Timesheet/Timesheet";
 import Screenshot from "./Pages/Screenshot/Screenshot";
+import Calendar from "./Pages/Calendar/Calendar";
 
 function App() {
   const isTokenValid = (token) => {
@@ -70,6 +71,10 @@ function App() {
             <Route
               path="/people/teams/:id"
               element={tokenIsValid ? <TeamName /> : <Login />}
+            ></Route>
+            <Route
+              path="/calendar"
+              element={tokenIsValid ? <Calendar /> : <Login />}
             ></Route>
             <Route path="/projects" element={<ProjectsPage />}></Route>
             <Route path="/projects/:id" element={<ProjectDeailsPage />}></Route>
