@@ -12,8 +12,6 @@ import CalendarActive from "../../Components/Assets/Calender=Active.png";
 import CalendarInactive from "../../Components/Assets/Calender=Inactive.png";
 import DashboardActive from "../../Components/Assets/Dashboard=Active.png";
 import DashboardInactive from "../../Components/Assets/Dashboard=Inactive.png";
-import NotificationsActive from "../../Components/Assets/Notifications=Active.png";
-import NotificationsInactive from "../../Components/Assets/Notifications=Inactive.png";
 import ReportsActive from "../../Components/Assets/Reports=active.png";
 import ReportsInactive from "../../Components/Assets/Reports=Inactive.png";
 import SettingsActive from "../../Components/Assets/Settings=Active.png";
@@ -218,30 +216,8 @@ const Sidebar = () => {
                     <span>Screenshots</span>
                   </Link>
                 </li>
-                
               </ul>
             )}
-          </li>
-          <li className="main-li">
-            <Link to="/notifications">
-              <div
-                className={`navbar-left-div ${
-                  activeItem === "notifications" ? "active" : ""
-                }`}
-                onClick={() => setActiveItem("notifications")}
-              >
-                <img
-                  src={
-                    activeItem === "notifications"
-                      ? NotificationsActive
-                      : NotificationsInactive
-                  }
-                  alt="icon"
-                  className="navbar-first-icon"
-                />
-                {isSidebarOpen && "Notifications"}
-              </div>
-            </Link>
           </li>
           <li className="main-li">
             <Link to="/projects">
