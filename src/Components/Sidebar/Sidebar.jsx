@@ -28,8 +28,12 @@ import { logout } from "../../redux/authSlice";
 
 const Sidebar = () => {
   const dispatch = useDispatch();
-  const logoutUser = () => {
-    dispatch(logout());
+  const logoutUser = (e) => {
+    if (!window.confirm("Are you sure you want to logout?")) {
+      e.preventDefault();
+    } else {
+      dispatch(logout());
+    }
   };
 
   const location = useLocation();
@@ -310,7 +314,7 @@ const Sidebar = () => {
             </Link>
           </li>
           <li className="main-li">
-            <Link to="/login" onClick={logoutUser}>
+            <Link to="/login" onClick={(e) => logoutUser(e)}>
               <div className="navbar-left-div">
                 <img
                   src={logouticon}
