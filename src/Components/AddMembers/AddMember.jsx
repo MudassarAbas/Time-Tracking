@@ -291,7 +291,7 @@ const AddMember = ({ show, onClose }) => {
               )}
             </div>
             <p className="form-group-input-text">
-              Organization owner and managers can manage all projects by default
+              Organization Owner and Managers can manage all projects by default
             </p>
           </div>
           <div className="form-actions">
