@@ -89,7 +89,7 @@ const Dashboard = () => {
           <Widget
             title="WORKED THIS WEEK"
             value="76:23:55"
-            change="12%"
+            change="26%"
             positive={true}
           />
           <Widget
