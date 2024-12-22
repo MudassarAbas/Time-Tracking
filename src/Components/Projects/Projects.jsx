@@ -28,7 +28,7 @@ const Projects = () => {
     {
       percentage: "100",
       departmentName: "Media Department",
-      time: "01:30:10",
+      time: "10:30:10",
     },
     {
       percentage: "80",
