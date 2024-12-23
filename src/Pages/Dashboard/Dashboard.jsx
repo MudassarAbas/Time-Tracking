@@ -60,12 +60,12 @@ const Dashboard = () => {
   // Log the local storage data
 
   const activities = [
-    { user: "Maryam Shakoor", time: "4:11 PM", image: "path/to/image" },
+    { user: "Maryam Shakoor", time: "4:16 PM", image: "path/to/image" },
     // Add more activities here
   ];
 
   const projects = [
-    { name: "Marketing Department", time: "316:34:55" },
+    { name: "Marketing Department", time: "314:34:55" },
     // Add more projects here
   ];
 
@@ -89,7 +89,7 @@ const Dashboard = () => {
           <Widget
             title="WORKED THIS WEEK"
             value="76:23:55"
-            change="26%"
+            change="29%"
             positive={true}
           />
           <Widget
@@ -107,7 +107,7 @@ const Dashboard = () => {
           <Widget
             title="TODAY'S WORKED HOURS"
             value="33:23:55"
-            change="20%"
+            change="21%"
             positive={true}
           />
         </div>
